@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost;encrypt=false;trustServerCertificate=false
+    username: sa
+    password: Banquemisr123
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    baseline-on-migrate: true
+
+secret:
+  value: banquemisr
+
+logging:
+  level:
+    org:
+      flywaydb: DEBUG
