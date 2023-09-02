@@ -1,13 +1,19 @@
-#Online Book Management System 
+Online Book Management System
+How to Run the Project
+Open the terminal.
 
-#How to run the project 
+Pull the SQL Server Docker image by running the following command:
 
-1- open the terminal
-2-write the following command in the cmd : docker pull mcr.microsoft.com/mssql/server
-3- After pulling the docker image , run the following command to run the image :
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Banquemisr123" -p 1433:1433 --name sql_server_container -d mcr.microsoft.com/mssql/server to run
-the image in a container 
-4- clone the project from github and run the application 
-5- visit : localhost:8080/swagger-ui/index.html to see swagger documentation of the service
+docker pull mcr.microsoft.com/mssql/server
 
+After pulling the Docker image, run the following command to create and run a Docker container:
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Banquemisr123" -p 1433:1433 --name sql_server_container -d mcr.microsoft.com/mssql/server
+This command creates a Docker container for SQL Server with the specified environment variables, password, and port mapping.
+
+Clone the project from GitHub to your local machine.
+
+Run the application on your local machine.
+
+Visit localhost:8080/swagger-ui/index.html in your web browser to access the Swagger documentation for the service.
 
