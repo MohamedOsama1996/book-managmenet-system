@@ -14,15 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/admin")
-public class AdminController {
+@RequestMapping("/transaction")
+public class TransactionController {
 
   @Autowired
   IUserBorrowService userBorrowService;
 
   @PreAuthorize("hasRole('ROLE_admin')")
   @RequestMapping(value = "/update",method = RequestMethod.PUT)
-  ResponseEntity<?> updateRequest(@RequestBody UpdateBorrowRequest updateBorrowRequest){
+  ResponseEntity<?> replyToCustomerRequest(@RequestBody UpdateBorrowRequest updateBorrowRequest){
 
     return new ResponseEntity<>(userBorrowService.updateTransaction(updateBorrowRequest), HttpStatus.OK);
   }
